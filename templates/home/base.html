@@ -1,0 +1,124 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Ribera Digital Studio">
+	<meta property="fb:admins" content="kate.dmitrieva" />
+	<meta property="fb:app_id" content="1638231183059375">
+	{% block meta_head %} {% endblock %}
+    <link rel="icon" href="http://sicilia-nostra.it/img/2015/favicon.ico">
+    <title>{% block head_title %}{% endblock %}</title>
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+	<link href="{{ STATIC_URL }}css/flat-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/animations.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	
+  </head>
+  <body>
+   <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3&appId=1638231183059375";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <div id="background">
+	<img id="not-for-md-img" src="{{ STATIC_URL }}images/background_second_level.jpg" alt="" />
+	</div>
+	<div id="not-for-md" class="nav_inside" role="navigation">
+						
+							<ul class="nav pull-right-inside">
+								<li>
+									<a href="/home/">ГЛАВНАЯ СТРАНИЦА</a>
+								</li>
+								<li>
+									<a href="/appointment/">ЗАПИСЬ НА ПРИЁМ</a>
+								</li>
+								<li>
+									<a href="/inside/">О КЛИНИКЕ</a>
+								</li>
+								<li>
+									<a href="/chat/">ОНЛАЙН КОНСУЛЬТАЦИЯ</a>
+								</li>
+								<li>
+									<a href="/services/">НАШИ УСЛУГИ</a>
+								</li>
+								<li>
+									<a href="/prices/">ЦЕНЫ</a>
+								</li>
+								<li>
+									<a href="/people/">ПЕРСОНАЛ</a>
+								</li>
+								<li>
+									<a href="/works/">РАБОТЫ НАШИХ ВРАЧЕЙ</a>
+								
+								</li>
+								<li>
+									<a href="/accounts/login/">АВТОРИЗАЦИЯ / ВХОД</a>
+								</li>
+								<li>
+									<a href="/contacts/">КОНТАКТЫ</a>
+								</li>
+								<li>
+									<a href="/job/">ВАКАНСИИ</a>
+								</li>
+							</ul>
+	</div>
+	<div class="container_inside" style="min-height:100%;">
+	<div class="btn-group-md-menu">
+  <button type="md-menu-button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Инфо <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/services/">Услуги</a></li>
+    <li><a href="/people/">Персонал</a></li>
+    <li><a href="/prices/">Цены</a></li>
+	<li><a href="/works/">Наши работы</a></li>
+	<li><a href="/job/">Вакансии</a></li>
+    <li class="divider"></li>
+    <li><a href="/">На главную</a></li>
+  </ul>
+</div>
+<div class="btn-group-md-menu">
+  <button type="md-menu-button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Контакты <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/appointment/">Запись на приём</a></li>
+    <li><a href="/chat/">Консультация</a></li>
+    <li><a href="/contacts/">Как нас найти</a></li>
+    <li class="divider"></li>
+    <li><a href="/">На главную</a></li>
+  </ul>
+</div>
+
+ 
+
+    {% block content %}
+
+ 
+	
+   
+    {% endblock %}
+	</div>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+	
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Verify Your E-mail Address" %}</h1>
+
+    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+<div>
+      <ul>
+	  <br/><br/><br/>
+	{% if user.is_authenticated %}
+	<li><a href="{% url 'account_email' %}">Поменять адрес электронной почты</a></li>
+	<li><a href="{% url 'account_logout' %}">Выйти из аккаунта</a></li>
+	{% else %}
+	<li><a href="{% url 'account_login' %}">Войти в аккаунт</a></li>
+	<li><a href="{% url 'account_signup' %}">Зарегистрироваться</a></li>
+	{% endif %}
+      </ul>
+    </div>
+{% endblock %}

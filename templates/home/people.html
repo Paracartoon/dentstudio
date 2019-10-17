@@ -1,0 +1,41 @@
+{% extends "home/base.html" %}
+{% block meta_head %}
+	<meta name="description" content="Клиника Дент Студио: наши врачи. Стоматологи-имплантологи, хирурги, терапевты, ортопеды, ортодонты, гигиенисты, гнатологи, а также косметологи. "/>
+	<meta name="keywords" content="протезирование, имплантация, отбеливание, пародонтит, периодонтит, коронки, виниры, стоматология, имплантология, парадонтология, гнатология, ортопедия, ортодонтия, косметология"/>
+	<meta property="og:url" content="http://ds.riberastudio.com/people/" />
+	<meta property="og:title" content="Дент Студио: наш персонал." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://ds.riberastudio.com/static/images/opengraph.jpg" />
+	<meta property="og:description" content="Наши врачи-стоматологи: имплантологи, хирурги, терапевты, ортопеды, ортодонты, гигиенисты, гнатологи, а также косметологи. ">
+{% endblock %}
+    {% block head_title %}Персонал{% endblock %}
+	{% block content %} 
+     <h1>Персонал</h1> <br>
+	 
+	 {% for person in staff %}
+	 
+	 {% if person.active %}
+           
+
+                <div class="col-md-6_secondlevel md_second_level_details">
+                <h5><a href="/people/{{person.link}}">{{ person.name }}</a></h5>{{ person.position|truncatewords:50 }} <br> 
+				<br><img class="img_staff" src="/media/{{person.image}}" alt="{{person.name}}"><br><br><p class="person_description">{% autoescape off %}{{ person.description|truncatewords:40 }} {% endautoescape %}<br><br><a href="/people/{{person.link}}">Читать далее ...</a><br><br></p></div>          
+       {% endif %}
+	   {% endfor %}
+<br/><br/>
+
+<footer1_pro>
+<center>
+Стоматологическая клиинка ДЕНТ СТУДИО: лицензия номер 77-01-001089 &nbsp;&nbsp; <div class="fb-follow" data-href="https://www.facebook.com/dentstudio.ru" data-colorscheme="light" data-layout="button" data-show-faces="true"> </div> 
+<br>
+<a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+<br>
+Наш адрес: Москва, улица Марксистская, дом 20, строение 1 &nbsp;&nbsp;|&nbsp;&nbsp;Наши телефоны: (495) 3633841 (495) 9121111  </center>
+</footer1_pro>
+   
+      </div>
+	  
+{% endblock %}	
+			
+
+		

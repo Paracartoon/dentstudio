@@ -1,0 +1,37 @@
+{% extends "home/base.html" %}
+{% block meta_head %}
+	<meta name="description" content="Клиника Дент Студио: наши вакансии."/>
+	<meta name="keywords" content="стоматолог, имплантолог, хирург, терапевт, косметолог, дерматолог, администратор"/>
+	<meta property="og:url" content="http://ds.riberastudio.com/job/" />
+	<meta property="og:title" content="Дент Студио: наши вакансии." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://ds.riberastudio.com/static/images/opengraph.jpg" />
+	<meta property="og:description" content="На сегодняшний день в центре Дент Студио открыто несколько вакансий.">
+{% endblock %}
+    {% block head_title %}Вакансии{% endblock %}
+	{% block content %} 
+     <h1>Вакансии</h1> <br>
+				{% if vacancy %}
+					
+					{% for pos in vacancy %}
+					<div class="col-md-6_secondlevel"><h4>{{ pos.position }}</h4><br><p class="job_skills">{{ pos.description }} <br><br><strong>Обязательные навыки:</strong> <br><br>{{pos.skills}} </p><br><a href="mailto:doctor@dentstudio.ru?subject=Вакансия {{pos.position}}"><p class="job_mailto">@ Прислать резюме для этой вакансии</a></p><br><br></div>{% endfor %}			
+				{% else %}
+					<strong>В категории "Вакансии" нет ни одного объявления. </strong>
+				{% endif %}
+
+
+
+
+<footer1_pro>
+<center>
+Стоматологическая клиинка ДЕНТ СТУДИО: лицензия номер 77-01-001089 &nbsp;&nbsp; <div class="fb-follow" data-href="https://www.facebook.com/dentstudio.ru" data-colorscheme="light" data-layout="button" data-show-faces="true"> </div> 
+<br>
+<a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+<br>
+Наш адрес: Москва, улица Марксистская, дом 20, строение 1 &nbsp;&nbsp;|&nbsp;&nbsp;Наши телефоны: (495) 3633841 (495) 9121111  </center>
+</footer1_pro>
+   
+      </div>
+	  
+{% endblock %}
+		

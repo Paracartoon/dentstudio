@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Дент Студио: стоматология в Москве. Наши услуги: имплантология (установка дентальных имплантатов), пародонтология (лечение заболеваний десен), терапия (лечение кариеса), гнатология (функциональный анализ зубочелюстной системы), ортопедия (протезирование коронками), ортодонтия (исправление прикуса), косметология"/>
+	<meta name="keywords" content="стоматология, имплантология, парадонтология, гнатология, ортопедия, ортодонтия, косметология"/>
+    <meta name="author" content="Ribera Digital Studio">
+	<meta property="fb:admins" content="kate.dmitrieva" />
+	<meta property="fb:app_id" content="1638231183059375">
+	<meta property="og:url" content="http://ds.riberastudio.com/" />
+	<meta property="og:title" content="Дент Студио: центр стоматологии и косметологии" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://ds.riberastudio.com/media/images/10_3vS8PZJ.jpg/" />
+	<meta property="og:description" content="Клиника Дент Студио успешно работает с 2001 года и предоставляет своим пациентам полный спектр стоматологических услуг: имплантация, лечение кариеса, протезирование коронками, функциональный анализ зубо-челюстной системы, профгигиена полости рта, исправление прикуса и т.д. Все пациенты клиинки также могут воспользоваться услугами профессионального косметолога.">
+    <link rel="icon" href="https://sicilia-nostra.it/img/2015/favicon.ico">
+
+    <title>Стоматологическая клиника Дент Студио</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+	<link href="{{ STATIC_URL }}css/flat-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/animations.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	
+  </head>
+  
+  <body>
+  
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3&appId=1638231183059375";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+ <div id="holder">     
+	<div class="page-wrapper">
+
+	<section class="header-1-sub">
+		
+			<div id="dentstudio">
+			ДЕНТ СТУДИО
+			</div>
+		
+			<div id="tel">
+			(495) 912 11 11
+			<br>(495) 3633841
+			<br> 
+			</div>
+			
+			
+			<div>
+			
+			<img id="diagram" src="{{STATIC_URL}}images/diagram1.png" alt="Услуги Дент Студио">
+			
+			<div id="services"> НАШИ <br>УСЛУГИ </div>
+
+			<a href="/service_articles/implant/" id="a1"><img id="id1" class="item" src="{{STATIC_URL}}images/tooth_impl.png" alt="Дентальные имплантаты"></a>
+			<a href="/service_articles/terapy/" id="a2"><img id="id2" class="item" src="{{STATIC_URL}}images/tooth_terapy.png" alt="Лечение кариеса"></a>
+			<a href="/service_articles/parodont/" id="a3"><img id="id3" class="item" src="{{STATIC_URL}}images/tooth_paro.png" alt="Лечение заболеваний десен"></a>
+			<a href="/service_articles/ortoped/" id="a4"><img id="id4" class="item" src="{{STATIC_URL}}images/tooth_ortoped.png"  alt="Протезирование коронками"></a>
+			<a href="/service_articles/cosmetology/" id="a5"><img id="id5" class="item" src="{{STATIC_URL}}images/tooth_cosmetology.png"  alt="Косметология"></a>
+			<a href="/service_articles/hygiene/" id="a6"><img id="id6" class="item" src="{{STATIC_URL}}images/tooth_hygiene.png"  alt="Гигиена полости рта"></a>
+			<a href="/service_articles/ortodont/" id="a7"><img id="id7" class="item" src="{{STATIC_URL}}images/tooth_orthodont.png"  alt="Исправление прикуса"></a>
+			<a href="/service_articles/gnatology/" id="a8"><img id="id8" class="item" src="{{STATIC_URL}}images/tooth_gnatology.png"  alt="Гнатология"></a>
+
+			<div id="centerDiv" >
+			<div id="id0match" class="region"></div>
+			<div id="id1match" class="region">ИМПЛАНТОЛОГИЯ</div>
+			<div id="id2match" class="region">ЛЕЧЕНИЕ КАРИЕСА</div>
+			<div id="id3match" class="region">ПАРОДОНТОЛОГИЯ</div>
+			<div id="id4match" class="region">ОРТОПЕДИЯ</div>
+			<div id="id5match" class="region">КОСМЕТОЛОГИЯ</div>
+			<div id="id6match" class="region">ПРОФГИГИЕНА</div>
+			<div id="id7match" class="region">ОРТОДОНТИЯ</div>
+			<div id="id8match" class="region">ГНАТОЛОГИЯ</div>
+    
+			</div>
+			</div>
+			<div class="nav" role="navigation">
+						
+							<ul class="nav pull-right">
+							
+								<li>
+									<a href="/appointment/">ЗАПИСЬ НА ПРИЁМ</a>
+								</li>
+								<li>
+									<a href="/inside/">О КЛИНИКЕ</a>
+								</li>
+								<li>
+									<a href="/chat/">ОНЛАЙН КОНСУЛЬТАЦИЯ</a>
+								</li>
+								<li>
+									<a href="/services/">НАШИ УСЛУГИ</a>
+								</li>
+								<li>
+									<a href="/prices/">ЦЕНЫ</a>
+								</li>
+								<li>
+									<a href="/people/">ПЕРСОНАЛ</a>
+								</li>
+								<li>
+									<a href="/works/">РАБОТЫ НАШИХ ВРАЧЕЙ</a>
+								</li>
+								<li>
+									<a href="/accounts/login/">АВТОРИЗАЦИЯ / ВХОД</a>
+								</li>
+								<li>
+									<a href="/contacts/">КОНТАКТЫ</a>
+								</li>
+								<li>
+									<a href="/job/">ВАКАНСИИ</a></li>
+								
+							</ul>
+						
+						</div>
+					</div>
+				
+				
+			
+			
+		</section>
+		
+
+<div id="body">	
+<div class="container">
+
+<div class="intro"> <p class="intro_title">ПЯТЬ ПРИЧИН ВЫБРАТЬ ДЕНТ СТУДИО:</p>
+<ul>
+<li><p class="five_reasons">Наш центр <a href="#main_bck">успешно работает с 2001 года и входит в десятку лучших стоматологий Москвы</a>;</p></li>
+<li><p class="five_reasons">Мы оказываем полный комплекс стоматологических услуг, от <a href="/services#profgigiena">профгигиены</a> до <a href="/services#gnatologia">гнатологии</a> и <a href="/services#implantacia">имплантации</a>;</p></li>
+<li><p class="five_reasons">В нашем центре вы также сможете воспользоваться услугами <a href="services#cosmetologia">профессионального косметолога</a>;</p></li>
+<li><p class="five_reasons">Мы находимся в ЦАО и <a href="/contacts/">нас легко найти</a>: улица Марксистская, дом 20/строение 1 (метро Таганская); </p></li>
+<li><p class="five_reasons">Вы можете <a href="/appointment/">записаться на приём онлайн</a> прямо сейчас!</p></li></ul>
+
+</div>
+
+{% if news %}
+					{% for post in news %}
+					<br>{{post.date}}<br> <p class="news_title"> <a href="/news/{{post.link}}">{{ post.title }}</a> </p>  <img class="news_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:145 }}{% endautoescape %}<a href="/news/{{post.link}}">&nbsp;&nbsp;Продолжить чтение </a></p>{% endfor %}			
+				{% else %}
+					<strong>В категории "Новости" нет ни одной новости. </strong>
+				{% endif %}
+				
+				
+				
+				{% if articles %}
+					{% for article in articles %}
+					<div class="row1">
+					<div class="col-md-4"><h3><a href="/articles/{{article.link}}" >{{ article.title }}</a></h3> <br><img class="news_image_small" src="/media/{{article.image}}" alt="{{article.title}}"><br><br><p class="art_text">{% autoescape off %}{{ article.text|truncatewords:150 }}{% endautoescape %}</p><a href="/articles/{{article.link}}">Продолжить чтение </a> <br></div> {% endfor %}
+				{% else %}
+					<strong>В категории "Статьи" нет ни одной статьи. </strong>
+				{% endif %}		
+				
+				<br>
+	</div>
+	
+	<div class="row1"><div class="col-md-12" id="main_bck"><p class="intro_title">Дент Студио: стоматология в Москве</p>
+
+Дент Студио, стоматологическая клиника на Таганке, открыла свои двери для пациентов <strong>в 2001 году</strong>. Тогда у нас родилась идея создать VIP стоматологию, не похожую на другие клиники Москвы; стоматологию, которую можно было смело назвать  <strong>"элитная cтоматология"</strong>. Как оказалось в дальнейшем, нам удалось это сделать, потому что после нас в Москве открылось множество стоматологий VIP класса, созданных по нашему образу. Уже тогда мы предлагали нашим клиентам так называемую быструю имплантацию, или, как эту услугу ещё называют - моментальную, одномоментную имплантацию. Это довольно интересное решение по функциональному и эстетическому восстановлению зубов позволило нашей клинике быстро занять свое место в десятке лучших стоматологий Москвы. 
+<br><br>
+Имплантация зуба – это лишь хирургический этап лечения. Не менее важную роль, а иногда и более важную играет работа стоматолога протезиста. Устанавливать коронки на имплантаты - довольно сложный и творческий процесс, требующий серьёзной подготовки и большого клинического опыта, поэтому все наши врачи являются профессионалами высшего класса. Принцип работы нашей клиники: оказывать нашим пациентам полный комплекс стоматологических услуг на VIP уровне.
+<br><br>
+Со временем мы открыли для наших пациентов <strong>Центр Эстетической Медицины Дент Студио</strong>, на базе нашей VIP стоматологии. Таким образом к широкому спектру стоматологических сервисов добавилась еще и косметология. Наши пациенты не толкаются в пробках и не теряют драгоценное время, потому что их стоматолог и косметолог работают в одном центре – на Марксистской! 
+
+В арсенале наших косметологов - престижные косметические линии Guinot с «Королевой процедур» гидродермия; Ericson Laboratorie; такие современные методики, как рестилайн, ботокс и мезотерапия. Поддерживать свою красоту легко и просто! Стоматология Дент Студио – это и здоровые зубы, и молодость и красота. 
+<br><br>
+Не так давно наши специалисты успешно закончили обучение по перспективному направлению стоматологии – гнатологии. Обучал их профессор Рудольф Славичек из австрийского университета Danube University Krems. Можно смело заявить, что нам «по зубам» проблемы с челюстными суставами. Не многие стоматологии Москвы могут такое о себе сказать. Гнатолог – это довольно редкая специализация стоматолога не только в Москве, но и во всем мире. 
+<br><br>
+Наша стоматологическая клиника находится в ЦАО Москвы. Это довольно удобное местоположение для стоматологии в Москве. Нас легко найти, к нам легко доехать как на общественном, так и на личном транспорте. Таганская площадь, станция метро Марксистская, улицы Марксистская, Таганская, Воронцовская, Большие Каменьщики – всё это ближайшие соседи нашей стоматологии. </div></div>
+      </div>
+	  </div>
+	</div>  
+<footer1>
+<center>
+Стоматологическая клиинка ДЕНТ СТУДИО: лицензия номер 77-01-001089 &nbsp;&nbsp; <div class="fb-follow" data-href="https://www.facebook.com/dentstudio.ru" data-colorscheme="light" data-layout="button" data-show-faces="true"> </div> <div class="fb-like" data-href="/" data-width="600" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+<br>
+<a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+<br>
+Наш адрес: Москва, улица Марксистская, дом 20, строение 1 &nbsp;&nbsp;|&nbsp;&nbsp;Наши телефоны: (495) 9121111 (495) 3633841  </center>
+</footer1>
+
+
+
+  
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>

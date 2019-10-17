@@ -1,0 +1,72 @@
+{% extends "home/base.html" %}
+{% block meta_head %}
+	<meta name="description" content="Клиника Дент Студио: полный спектр стоматологических услуг. Имплантология - установка дентальных имплантатов; ортопедия - протезирование коронками, винирами; ортодонтия - исправление прикуса любой степени сложности; терапия - лечение кариеса; парадонтология - лечение заболеваний десен; гнатология - функциональный анализ зубо-челюстной системы; профгигиена полости рта; косметология. "/>
+	<meta name="keywords" content="протезирование, имплантация, отбеливание, пародонтит, периодонтит, коронки, виниры, стоматология, имплантология, парадонтология, гнатология, ортопедия, ортодонтия, косметология"/>
+	<meta property="og:url" content="http://ds.riberastudio.com/services/" />
+	<meta property="og:title" content="Дент Студио: наши услуги по стоматологии и косметологии." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://ds.riberastudio.com/static/images/ds_opengraph.jpg" />
+	<meta property="og:description" content="Лечение кариеса и заболеваний десен, протезирование коронками, имплантами и винирами, эстетическая реставрация зубов, имплантация в сложных случаях, отбеливание, функциональный анализ и другие стоматологические, а также косметологические услуги.">
+{% endblock %}
+
+    {% block head_title %}Услуги{% endblock %}
+	{% block content %} 
+     <h1>Наши услуги</h1> <br/><br/>
+
+<div id="gnatologia"><p class="news_title"><a href="/service_articles/gnatology/">Гнатология</a></p></div> 
+
+					{% for post in gnatolog %}
+					<h5><a href="/service_articles/gnatology/{{post.link}}">{{ post.title }}</a> </h5>  <img class="service_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:50 }}{% endautoescape %}<a href="/service_articles/gnatology/{{post.link}}"><br>Продолжить чтение </a><br><br></p>{% endfor %}
+
+ 
+
+<div id = "ortodontia"><a href="/service_articles/ortodont/"><p class="news_title">Oртодонтия </p></a></div>
+
+					{% for post in ortodont %}
+					<h5> <a href="/service_articles/ortodont/{{post.link}}">{{ post.title }}</a> </h5>  <img class="service_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:50 }}{% endautoescape %}<a href="/service_articles/ortodont/{{post.link}}"><br>Продолжить чтение </a><br><br></p>{% endfor %}
+
+
+
+<div id = "implantacia"><a href="/service_articles/implant/"><p class="news_title">Имплантология</p></a></div> 
+					{% for post in implantolog %}
+					<h5> <a href="/service_articles/implant/{{post.link}}">{{ post.title }}</a> </h5>  <img class="service_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:50 }}{% endautoescape %}<a href="/service_articles/implant/{{post.link}}"><br>Продолжить чтение </a><br><br></p>{% endfor %}
+
+<div id = "terapia"><a href="/service_articles/terapy/"><p class="news_title">Терапия</p></a></div> <br/>
+
+					{% for post in terapy %}
+					<h5> <a href="/service_articles/terapy/{{post.link}}">{{ post.title }}</a> </h5>  <img class="service_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:50 }}{% endautoescape %}<a href="/service_articles/terapy/{{post.link}}"><br>Продолжить чтение </a><br><br></p>{% endfor %}
+
+<div id = "ortopedia"><a href="/service_articles/ortoped/"><p class="news_title">Ортопедия</p></a></div> <br/>
+
+					{% for post in ortoped %}
+					<h5> <a href="/service_articles/ortoped/{{post.link}}">{{ post.title }}</a> </h5>  <img class="service_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:50 }}{% endautoescape %}<a href="/service_articles/ortoped/{{post.link}}"><br>Продолжить чтение </a><br><br></p>{% endfor %}<br><br>
+
+<div id = "profgigiena"><a href="/service_articles/hygiene/"><p class="news_title">Профгигиена</p></a></div><br/>
+
+					{% for post in hygiene %}
+					<h5> <a href="/service_articles/hygiene/{{post.link}}">{{ post.title }}</a> </h5>  <img class="service_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:50 }}{% endautoescape %}<a href="/service_articles/hygiene/{{post.link}}"><br>Продолжить чтение </a><br><br></p>{% endfor %}<br><br>	
+
+<div id = "parodontologia"><a href="/service_articles/parodont/"><p class="news_title">Пародонтология</p></a></div><br/>
+
+					{% for post in parodont %}
+					<h5> <a href="/service_articles/parodont/{{post.link}}">{{ post.title }}</a> </h5>  <img class="service_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:50 }}{% endautoescape %}<a href="/service_articles/parodont/{{post.link}}"><br>Продолжить чтение </a><br><br></p>{% endfor %}<br><br>
+
+<div id = "cosmetologia"><a href="/service_articles/cosmetology/"><p class="news_title">Косметология</p></a></div><br/>
+
+					{% for post in cosmetolog %}
+					<h5> <a href="/service_articles/cosmetology/{{post.link}}">{{ post.title }}</a> </h5>  <img class="service_image_small" src="/media/{{post.image}}" alt="{{post.title}}"><p class="news_text">{% autoescape off %}{{ post.text|truncatewords:50 }}{% endautoescape %}<a href="/service_articles/cosmetolog/{{post.link}}"><br>Продолжить чтение </a><br><br></p>{% endfor %}<br><br>
+ 
+
+
+<footer1_pro>
+<center>
+Стоматологическая клиинка ДЕНТ СТУДИО: лицензия номер 77-01-001089 &nbsp;&nbsp; <div class="fb-follow" data-href="https://www.facebook.com/dentstudio.ru" data-colorscheme="light" data-layout="button" data-show-faces="true"> </div> 
+<br>
+<a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+<br>
+Наш адрес: Москва, улица Марксистская, дом 20, строение 1 &nbsp;&nbsp;|&nbsp;&nbsp;Наши телефоны: (495) 3633841 (495) 9121111  </center>
+</footer1_pro>
+   
+      </div>
+	  
+{% endblock %}	

@@ -1,0 +1,38 @@
+{% extends "home/base.html" %}
+{% block meta_head %}
+	<meta name="description" content="Клиника Дент Студио: работы наших стоматологов. Протезирование коронками, протезирование имплантами, протезирование винирами, эстетическая реставрация зубов, имплантация в сложных случаях, лечение пародонтита, имплантация с одномоментным протезированием, имплантация с одномоментным восстановлением костной ткани, отбеливание зубов, лечение периодонтита и другие работы наших стоматологов."/>
+	<meta name="keywords" content="протезирование, имплантация, отбеливание, пародонтит, периодонтит, коронки, виниры, стоматология, имплантология, парадонтология, гнатология, ортопедия, ортодонтия, косметология"/>
+	<meta property="og:url" content="http://ds.riberastudio.com/works/" />
+	<meta property="og:title" content="Дент Студио: работы наших стоматологов." />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://ds.riberastudio.com/static/images/ds_opengraph.jpg" />
+	<meta property="og:description" content="Лечение кариеса и заболеваний десен, протезирование коронками, имплантами и винирами, эстетическая реставрация зубов, имплантация в сложных случаях, отбеливание, функциональный анализ и другие работы наших врачей.">
+{% endblock %}
+    {% block head_title %}Работы наших врачей{% endblock %}
+	{% block content %} 
+     <h1>Работы наших стоматологов</h1> <br>
+	 
+	 {% for work in works %}
+	 
+	 {% if work.active %}
+                <div id="work_gallery"><a href="/works/{{work.link}}">{{ work.title }}</a><br><br><p class="small_desc">{{ work.description|truncatewords:100 }}</p> 
+				<br><img class="works_small_img" src="/media/{{work.main_image1}}" alt="{{work.title}}"> <img class="works_small_img" src="/media/{{work.main_image2}}" alt="{{work.title}}"> <img class="works_small_img" src="/media/{{work.main_image3}}" alt="{{work.title}}"><br><a class="small_desc" href="/works/{{work.link}}">Подробнее ...</a> </div>  <hr> 
+       {% endif %}
+	   {% endfor %}
+
+
+<footer1_pro>
+<center>
+Стоматологическая клиинка ДЕНТ СТУДИО: лицензия номер 77-01-001089 &nbsp;&nbsp; <div class="fb-follow" data-href="https://www.facebook.com/dentstudio.ru" data-colorscheme="light" data-layout="button" data-show-faces="true"> </div> 
+<br>
+<a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+<br>
+Наш адрес: Москва, улица Марксистская, дом 20, строение 1 &nbsp;&nbsp;|&nbsp;&nbsp;Наши телефоны: (495) 3633841 (495) 9121111  </center>
+</footer1_pro>
+   
+      </div>
+	  
+{% endblock %}	
+			
+
+		

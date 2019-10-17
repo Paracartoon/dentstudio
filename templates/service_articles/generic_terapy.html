@@ -1,0 +1,33 @@
+{% extends "service_articles/base.html" %}
+    {% block head_title %}{{ article.title }}{% endblock %}
+	{% block content %} 
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3&appId=1638231183059375";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+     <h1>{{ article.title }}</h1> <br>
+<img class="service_image_small" src="/media/{{article.image}}" alt="{{article.title}}"><p class="news_text">{% autoescape off %}{{ article.text }}{% endautoescape %}</p>
+<br><br>
+<div class="btn-group" role="group" aria-label="/home/">
+  <button onclick="window.open('/services', '_self')" id="back" type="button" class="btn btn-default">  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Назад</button>
+</div>
+
+<div class="fb-like" data-href="/service_articles/terapy/{{article.link}}" data-width="600" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+
+<br/><br/><br/>
+
+<footer1_pro>
+<center>
+Стоматологическая клиинка ДЕНТ СТУДИО: лицензия номер 77-01-001089 &nbsp;&nbsp; <div class="fb-follow" data-href="https://www.facebook.com/dentstudio.ru" data-colorscheme="light" data-layout="button" data-show-faces="true"> </div> 
+<br>
+<a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+<br>
+Наш адрес: Москва, улица Марксистская, дом 20, строение 1 &nbsp;&nbsp;|&nbsp;&nbsp;Наши телефоны: (495) 3633841 (495) 9121111  </center>
+</footer1_pro>
+   
+      </div>
+{% endblock %}

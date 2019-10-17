@@ -1,0 +1,30 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account %}
+
+{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+
+
+{% block content %}
+
+<h1>{% trans "Confirm E-mail Address" %}</h1>
+
+{% user_display confirmation.email_address.user as user_display %}
+        
+<p>{% blocktrans with confirmation.email_address.email as email %}You have confirmed that <a href="mailto:{{email}}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
+
+<div>
+      <ul>
+	  <br/><br/><br/>
+	{% if user.is_authenticated %}
+	<li><a href="{% url 'account_email' %}">Поменять адрес электронной почты</a></li>
+	<li><a href="{% url 'account_logout' %}">Выйти из аккаунта</a></li>
+	{% else %}
+	<li><a href="{% url 'account_login' %}">Войти в аккаунт</a></li>
+	<li><a href="{% url 'account_signup' %}">Зарегистрироваться</a></li>
+	{% endif %}
+      </ul>
+    </div>
+
+{% endblock %}

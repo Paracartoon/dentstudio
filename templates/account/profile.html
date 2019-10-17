@@ -1,0 +1,40 @@
+{% extends "account/base.html" %}
+    {% block head_title %}Профиль пользователя{% endblock %}
+	{% block content %} 
+
+    {% if messages %}
+    <div>
+{{message}}
+    </div>
+    {% endif %}
+
+    <div>
+	{% if user.is_authenticated %}
+	  <h3>Здравствуйте, {{user.first_name}}! 
+
+<br>Состояние вашего лицевого счета:</h3> 
+			
+			    	{% autoescape off %} {{user.customer.account}}<br>{% endautoescape %} 
+					
+					<div class="btn-group" role="group" aria-label="/home/">
+  <button onclick="window.open('/accounts/logout/', '_self')" id="profile-logout" type="button" class="btn btn-default"> Выйти из личного кабинета</button>
+</div>
+					
+					<!---<br><br><br><a class="profile-message" href="{% url 'account_email' %}">Поменять адрес электронной почты</a>--->
+
+              
+    {% endif %}
+ 
+<footer1_pro>
+<center>
+Стоматологическая клиинка ДЕНТ СТУДИО: лицензия номер 77-01-001089 &nbsp;&nbsp; <div class="fb-follow" data-href="https://www.facebook.com/dentstudio.ru" data-colorscheme="light" data-layout="button" data-show-faces="true"> </div> 
+<br>
+<a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+<br>
+Наш адрес: Москва, улица Марксистская, дом 20, строение 1 &nbsp;&nbsp;|&nbsp;&nbsp;Наши телефоны: (495) 3633841 (495) 9121111  </center>
+</footer1_pro>
+
+   
+      </div>
+	  
+{% endblock %}	

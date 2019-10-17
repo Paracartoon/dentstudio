@@ -1,0 +1,8 @@
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Вас приветствует сайт {{ site_name }}!
+
+Вы получлии этот e-mail, потому что пользователь {{ user_display }} на {{ site_domain }} указал ваш электронный адрес в качестве контактного.
+
+Чтобы подтвердить ваш адрес, нажмите на ссылку: {{ activate_url }}
+{% endblocktrans %}{% endautoescape %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Спасибо за участие в проекте {{ site_name }}!
+{{ site_domain }}{% endblocktrans %}

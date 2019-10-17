@@ -1,0 +1,42 @@
+{% extends "account/base.html" %}
+    {% block head_title %}Профиль пользователя{% endblock %}
+	{% block content %} 
+
+    {% if messages %}
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+	{% for message in messages %}
+	<li>{{message}}</li>
+	{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <div>
+	{% if user.is_authenticated %}
+	<a href="{% url 'account_email' %}">Поменять адрес электронной почты</a>
+	<a href="{% url 'account_logout' %}">Выход</a>
+	{% endif %}
+     
+	 DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+
+	
+	  <h1>Состояние вашего лицевого счета</h1> 
+					<br>
+					{% if customer %}
+					{% for person in customer %}
+					<br>{{person.account}}<br>{% endfor %}	
+{% else %}
+					<strong>В категории "Новости" нет ни одной статьи. </strong>
+				{% endif %}		    </div>			
+		
+    
+ 
+ <footer1>
+Стоматологическая клиника ДЕНТ СТУДИО: Москва, ул.Марксистская, д.20, стр.1 (495) 3633841 (495) 3633851 <br><a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+</footer1>
+   
+      </div>
+	  
+{% endblock %}	

@@ -1,0 +1,9 @@
+# User-agent: *
+
+# Disallow: /admin/
+
+# Disallow: /accounts/profile/
+
+# Disallow: /accounts/logout/
+
+Sitemap: http://dentstudio.ru/sitemap.xml

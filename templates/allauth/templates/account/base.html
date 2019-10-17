@@ -1,0 +1,84 @@
+
+{% load staticfiles %}
+
+<html lang="rus">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://sicilia-nostra.it/img/2015/favicon.ico">
+
+    <title>{% block head_title %}{% endblock %}</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+	<link href="{{ STATIC_URL }}css/flat-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/animations.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+	{% block extra_head %}
+    {% endblock %}
+  </head>
+
+  <body>
+   <div id="background">
+	<img src="http://sicilia-nostra.it/img/2015/bc_image_inside_1.jpg" class="stretch" alt="" />
+	</div>
+	
+    {% block body %}
+
+    {% if messages %}
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+	{% for message in messages %}
+	<li>{{message}}</li>
+	{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <div>
+      <strong>Menu:</strong>
+      <ul>
+	{% if user.is_authenticated %}
+	<li><a href="{% url 'account_email' %}">Change E-mail</a></li>
+	<li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+	{% else %}
+	<li><a href="{% url 'account_login' %}">Sign In</a></li>
+	<li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+	{% endif %}
+      </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+    {% endblock %}
+    {% block extra_body %}
+    {% endblock %}
+  </body>
+<br/><br/><br/><br/><br/>
+
+<footer1>
+Стоматологическая клиника ДЕНТ СТУДИО: Москва, ул.Марксистская, д.20, стр.1 (495) 3633841 (495) 3633851
+</footer1>
+   
+      </div>
+	  
+
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>				
+				
+			

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Клиника Дент Студио: предварительная запись на приём. Вы можете записаться на приём онлайн, наш администратор свяжется с вами для уточнения времени приёма."/>
+	<meta name="keywords" content="стоматология, имплантология, парадонтология, гнатология, ортопедия, ортодонтия, косметология"/>
+    <meta name="author" content="Ribera Digital Studio">
+	<meta property="fb:admins" content="kate.dmitrieva" />
+	<meta property="fb:app_id" content="1638231183059375">
+	<meta property="og:url" content="http://ds.riberastudio.com/appointment/" />
+	<meta property="og:title" content="Дент Студио: запись на приём онлайн" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="http://ds.riberastudio.com/static/images/ds_opengraph.jpg" />
+	<meta property="og:description" content="Вы можете записаться на приём онлайн: заполните форму, после чего наш администратор свяжется с вами для подтверждения записи.">
+    <link rel="icon" href="http://sicilia-nostra.it/img/2015/favicon.ico">
+
+    <title>Предварительная запись на приём</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+	<link href="{{ STATIC_URL }}css/flat-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/animations.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?v=11">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/jquery-ui.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}js/kalypto.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="{{STATIC_URL}}js/kalypto.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script>
+	
+	
+  jQuery(function() {
+  //console.log(window.innerWidth);
+  if (window.innerWidth > 1030){
+  $.datepicker.regional['ru'] = { 
+closeText: 'Закрыть', 
+prevText: '&#x3c;Пред', 
+nextText: 'След&#x3e;', 
+currentText: 'Сегодня', 
+monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 
+'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'], 
+monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 
+'Июл','Авг','Сен','Окт','Ноя','Дек'], 
+dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'], 
+dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'], 
+dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'], 
+dateFormat: 'dd.mm.yy', 
+firstDay: 1, 
+isRTL: false 
+};
+ $.datepicker.setDefaults($.extend($.datepicker.regional["ru"]));
+    jQuery( "#id_date" ).datepicker();
+	$( "#id_problem" ).selectmenu({
+  width: 250
+});
+	$( "#id_doctor" ).selectmenu({
+  width: 250
+});
+	$( "#id_time" ).selectmenu({
+  width: 250
+});
+  $('input').attr('autocomplete','off');
+
+$("#id_cc_myself").kalypto();
+  
+  } 
+
+  
+  });
+  
+ 
+  </script>
+  <style>
+    fieldset {
+      border: 2;
+    }
+    label {
+      
+      margin: 0px 0px 20px 0px;
+    }
+    select {
+	  
+      width: 200px;
+	  height: 10px;
+	  
+    }
+    .overflow {
+      height: 10px;
+    }
+	
+
+  </style>
+  </head>
+
+   <body>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3&appId=1638231183059375";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+   <div id="background">
+	<img id="not-for-md-img" src="{{ STATIC_URL }}images/background_second_level.jpg"" alt="" />
+	</div>
+	<div id="not-for-md" class="nav_inside" role="navigation">
+						
+							<ul class="nav pull-right-inside">
+								<li>
+									<a href="/home/">ГЛАВНАЯ СТРАНИЦА</a>
+								</li>
+								<li>
+									<a href="/appointment/">ЗАПИСЬ НА ПРИЁМ</a>
+								</li>
+								<li>
+									<a href="/inside/">О КЛИНИКЕ</a>
+								</li>
+								<li>
+									<a href="/chat/">ОНЛАЙН КОНСУЛЬТАЦИЯ</a>
+								</li>
+								<li>
+									<a href="/services/">НАШИ УСЛУГИ</a>
+								</li>
+								<li>
+									<a href="/prices/">ЦЕНЫ</a>
+								</li>
+								<li>
+									<a href="/people/">ПЕРСОНАЛ</a>
+								</li>
+								<li>
+									<a href="/works/">РАБОТЫ НАШИХ ВРАЧЕЙ</a>
+								
+								</li>
+								<li>
+									<a href="/accounts/login/">АВТОРИЗАЦИЯ / ВХОД</a>
+								</li>
+								<li>
+									<a href="/contacts/">КОНТАКТЫ</a>
+								</li>
+								<li>
+									<a href="/job/">ВАКАНСИИ</a>
+								</li>
+							</ul>
+	</div>
+	<div class="container_inside" style="min-height:100%;">
+	<div class="btn-group-md-menu">
+  <button type="md-menu-button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Инфо <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/services/">Услуги</a></li>
+    <li><a href="/people/">Персонал</a></li>
+    <li><a href="/prices/">Цены</a></li>
+	<li><a href="/works/">Наши работы</a></li>
+	<li><a href="/job/">Вакансии</a></li>
+    <li class="divider"></li>
+    <li><a href="/">На главную</a></li>
+  </ul>
+</div>
+<div class="btn-group-md-menu">
+  <button type="md-menu-button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Контакты <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="/appointment/">Запись на приём</a></li>
+    <li><a href="/chat/">Консультация</a></li>
+    <li><a href="/contacts/">Как нас найти</a></li>
+    <li class="divider"></li>
+    <li><a href="/">На главную</a></li>
+  </ul>
+</div>
+     <h1>Запись на приём</h1> 
+ <br/><h5>Пожалуйста, заполните форму, после чего наш администратор свяжется с вами для подтверждения записи и уточнения времени приёма. </h5> <br/><br/>
+
+        <form method="post" action="">
+            {% csrf_token %}
+			{{ form.as_p }}
+			<br/><br/>
+            <button type="submit" value="Submit">Записаться на приём</button> 
+        </form>
+<div class="btn-group" role="group" aria-label="/home/">
+  <button onclick="window.open('/', '_self')" id="back-app" type="button" class="btn btn-default">  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Назад</button>
+</div>
+<br/><br/>
+<div class="fb-like" data-href="/appointment/" data-width="600" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+
+<br/><br/><br/><br/><br/>
+
+<footer1_pro>
+<center>
+Стоматологическая клиинка ДЕНТ СТУДИО: лицензия номер 77-01-001089 &nbsp;&nbsp; <div class="fb-follow" data-href="https://www.facebook.com/dentstudio.ru" data-colorscheme="light" data-layout="button" data-show-faces="true"> </div> 
+<br>
+<a class="afooter" href="/services/">Стоматология</a> | <a class="afooter"  href="/services#implantacia">Имплантология</a> | <a class="afooter"  href="/services#parodontologia">Пародонтология</a> | <a class="afooter"  href="/services#gnatologia">Гнатология</a> | <a class="afooter"  href="/services#ortopedia">Ортопедия</a> | <a class="afooter"  href="/services#ortodontia">Ортодонтия</a> | <a  class="afooter" href="/services#cosmetologia">Косметология</a>
+<br>
+Наш адрес: Москва, улица Марксистская, дом 20, строение 1 &nbsp;&nbsp;|&nbsp;&nbsp;Наши телефоны: (495) 3633841 (495) 9121111  </center>
+</footer1_pro>
+	
+     </div>
+	  
+
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>				
+				
+			
+
+		
